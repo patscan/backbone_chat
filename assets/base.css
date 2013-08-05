@@ -4,23 +4,6 @@ body {
 	padding: 0;
 }
 
-#chat-window {
-	display: block;
-	width: 500px; height: 300px;
-	background-color: white;
-	overflow: auto;
-}
-
-#new-message {
-	width: 70%;
-}
-
-#submit-message {
-	display: inline-block;
-	width: 25%;
-	/*float: right;*/
-}
-
 body {
 	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.4em;
@@ -35,21 +18,36 @@ body {
 	font-smoothing: antialiased;
 }
 
-#todoapp h1 {
-	position: absolute;
-	top: -120px;
-	width: 100%;
-	font-size: 70px;
-	font-weight: bold;
+#chat-window {
+	display: block;
+	width: 500px; height: 300px;
+	background-color: white;
+	overflow: auto;
+	margin-bottom: 5px;
+}
+
+#chat-window div {
+	margin-top: 3px;
+}
+
+#new-message {
+	float: left;
+	width: 400px;
+	margin-right: 5px;
+}
+
+#submit-message {
+	color: white;
+	font-size: 10px;
 	text-align: center;
-	color: #b3b3b3;
-	color: rgba(255, 255, 255, 0.3);
-	text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
-	-webkit-text-rendering: optimizeLegibility;
-	-moz-text-rendering: optimizeLegibility;
-	-ms-text-rendering: optimizeLegibility;
-	-o-text-rendering: optimizeLegibility;
-	text-rendering: optimizeLegibility;
+	margin-top: 1px;
+	background-color: SlateGray;
+	display: inline-block;
+	width: 90px;
+}
+
+#submit-message:hover {
+	background-color: LightSlateGray;
 }
 
 #header {
@@ -62,4 +60,10 @@ body {
 	z-index: 2;
 	border-top: 1px dotted #adadad;
 }
+
+.timestamp {
+	font-size: .8em;
+	font-weight: bold;
+}
+
 

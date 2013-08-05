@@ -8,20 +8,21 @@
 </head>
 <body>
   <section id="chatapp">
+    <h1>Chat with yourself!</h1>
     <div id="chat-window">
     </div>  
     <input id="new-message" placeholder="Chat it up!" autofocus>
     <div id="submit-message" >submit!</div>
   </section>
   <script type="text/template" id="message-template">
-    <div class="view">
+    <span class="timestamp"><%- timestamp %></span>
     <%- body %>
-    </div>
   </script>
   <script src="js/lib/jquery.min.js"></script>
   <script src="js/lib/underscore-min.js"></script>
   <script src="js/lib/backbone-min.js"></script>
   <script src="js/lib/backbone.localStorage.js"></script>
+  <script src="js/lib/moment-min.js"></script>
   <script src="js/models/message.js"></script>
   <script src="js/collections/messages.js"></script>
   <script src="js/views/messages.js"></script>

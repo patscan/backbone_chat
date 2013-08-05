@@ -36,8 +36,12 @@ var app = app || {};
 
     addMessage: function( message ) {
       var view = new app.MessageView({ model: message });
-      $('#chat-window').append(view.render().el);
+      var rendered = view.render().el;
+      $('#chat-window').append(rendered);
       $('#chat-window').scrollTop($('#chat-window').prop("scrollHeight"));
+      $('#chat-window div:last-child').animate({
+        opacity: 0.25
+      }, 5000);
     },
 
     addAll: function() {
